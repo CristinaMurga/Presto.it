@@ -83,7 +83,7 @@
                 <div class="row mt-4">
 
                     @foreach($insertions as $insertion)
-                    <div class="col-12  col-sm-6 col-md-4 ">
+                    <div class="col-12  col-sm-6 col-md-3 ">
 
                         <x-card :title="$insertion->title" :category="$insertion->category->name"
                             :image="!$insertion->images()->get()->isEmpty() ? $insertion->images()->first()->getUrl(300,300) : '/images/img-presto.jpg'"

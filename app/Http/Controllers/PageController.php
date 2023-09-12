@@ -11,7 +11,7 @@ class PageController extends Controller
     public function home()
     {
         $categories = \App\Models\Category::all();
-        $insertions = \App\Models\Insertions::where('is_accepted', true)->take(6)->latest()->get();
+        $insertions = \App\Models\Insertions::where('is_accepted', true)->take(4)->latest()->get();
         return view('home', compact('insertions', 'categories'));
     }
 

@@ -79,7 +79,8 @@ return  [
 //error and success msg
     'notpossibleToRemove' => 'No puedes eliminar este anuncio',
     'succesfullyRemoved' => 'El anuncio se ha eliminado correctamente',
-    'successCreated' => 'El anuncio ha sido creado correctamente y lo publicaremos despues de revionarlo',
+    'successEdited' => 'El anuncio ha sido modificado correctamente y lo publicaremos despues de revisionarlo',
+    'successCreated' => 'El anuncio ha sido creado correctamente y lo publicaremos despues de revisionarlo',
     'insertionAccepted' => "El anuncio ha sido aceptado",
     'insertionRejected' => "El anuncio ha sido rechazado", 
     'revisorRequest' =>'¡Enhorabuena! Has solicitado convertirte en revisor',

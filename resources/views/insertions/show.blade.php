@@ -12,6 +12,7 @@
 
      <div class="container my-3 showContainer BackGroundIllustration border-orange rounded ">
          <div class="row ">
+            @if($insertion->user_id == auth()->user()->id)
              <div class="mt-2 d-flex flex-row-reverse">
                  <form action="{{route('insertions.destroy' , $insertion )}}" method="POST">
                      @csrf
@@ -20,8 +21,8 @@
                  </form>
                  <a href="{{ route('insertions.edit' , $insertion)}}" class="btn btn-success mt-1 me-1"><i
                          class="bi bi-pencil-fill"></i></a>
-
              </div>
+            @endif
 
 
 
@@ -68,15 +69,17 @@
 
              <div class=" mt-5 background-green text-white px-5 rounded">
 
-                 <div class="col-12  mt-2">
+                 <div class="col-12  mt-2 py-3">
                      <div class=" d-flex justify-content-between">
                          <h4>{{ \App\Custom\Currency::formatEuro($insertion->price)}}</h4>
                          <p class=" d-flex justify-content-end">{{$insertion->created_at->diffForHumans()}}</p>
                      </div>
                      <p class="mt-2">{{$insertion->description}}</p>
 
+                     @if($insertion->user_id != auth()->user()->id)
                      <a href="mailto:{{$insertion->user->email}}"><button type="button"
                              class="btn buttonColor my-3">{{__('ui.contactVendor')}}</button></a>
+                    @endif
                  </div>
              </div>
          </div>

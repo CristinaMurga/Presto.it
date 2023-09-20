@@ -85,11 +85,12 @@ return  [
     'becomeRevisor' => 'Diventa revisore',
 
 //error and success msg
-'notpossibleToRemove' => 'Non puoi cancellare questo annuncio',
-'succesfullyRemoved' => 'Annuncio eliminato correttamente.',
-'successCreated' => 'Annuncio creato correttamente, sarà pubblicato dopo la revisione.',
-'insertionAccepted' => "L'annuncio è stato accettato",
-'insertionRejected' => "L'annuncio è stato rifiutato", 
-'revisorRequest' =>'Complimenti hai richiesto di diventare revisore con successo!',
-'doneRevisor' => "Complimenti L\'utente è diventato revisore"
+    'notpossibleToRemove' => 'Non puoi cancellare questo annuncio',
+    'succesfullyRemoved' => 'Annuncio eliminato correttamente.',
+    'successCreated' => 'Annuncio creato correttamente, sarà pubblicato dopo la revisione.',
+    'successEdited' => 'Annuncio modificato correttamente, sarà pubblicato dopo la revisione.',
+    'insertionAccepted' => "L'annuncio è stato accettato",
+    'insertionRejected' => "L'annuncio è stato rifiutato", 
+    'revisorRequest' =>'Complimenti hai richiesto di diventare revisore con successo!',
+    'doneRevisor' => "Complimenti L\'utente è diventato revisore"
 ];

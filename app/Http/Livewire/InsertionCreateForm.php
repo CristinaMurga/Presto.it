@@ -81,6 +81,7 @@ class InsertionCreateForm extends Component
     {   
         $this->validate();
         $this->insertion->user_id = auth()->user()->id;
+        $this->insertion->is_accepted = null;
         $this->insertion->save();
         
         if (count($this->images)) {
@@ -104,8 +105,14 @@ class InsertionCreateForm extends Component
             
         }
         
-        
-        session()->flash('success', __('ui.successCreated'));
+        if(!$this->insertion->exists){
+            session()->flash('success', __('ui.successCreated'));
+        }
+        else {
+            session()->flash('success', __('ui.successEdited'));
+        }
+      
+        return redirect()->to('insertions/create');
         $this->newInsertion();
         $this->emitTo('insertion-list', 'loadInsertions');
     

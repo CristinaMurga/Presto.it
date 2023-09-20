@@ -51,21 +51,22 @@ class InsertionsController extends Controller
      */
     public function edit(insertions $insertion)
     {
-        
-       // $images = \App\Models\Image::search($insertion->searched);
- 
-    return view('insertions.edit', compact('insertion'/*, 'images'*/));
+        if($insertion->user_id != auth()->user()->id) {
+            abort(403);
+        }
+        return view('insertions.edit', compact('insertion'/*, 'images'*/));
     }
     public function modifyInsertion(Request $request, insertions $insertions)
     {
+        if($insertions->user_id != auth()->user()->id) {
+            abort(403);
+        }
         $categories = \App\Models\Category::all();
         $insertion = Insertions::search($request->searched)->where('is_accepted', true)->paginate(16);
         return view('categoryShow', compact('insertion','categories'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+  
     public function update(Request $request, insertions $insertions)
     {
         $categories = \App\Models\Category::all();

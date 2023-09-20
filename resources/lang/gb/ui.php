@@ -79,7 +79,8 @@ return  [
 //error and success msg
     'notpossibleToRemove' => 'You cannot remove this insertion',
     'succesfullyRemoved' => 'Insertion has been successfully removed',
-    'successCreated' => 'Insertion has been successfully created and will pubblish after is reviewed',
+    'successCreated' => 'Insertion has been successfully created and it will be pubblished after it is reviewed',
+    'successEdited' => 'Insertion has been successfully edited and  it will be pubblished after it is reviewed',
     'insertionAccepted' => "Insertion has been accepted",
     'insertionRejected' => "Insertion has rejected", 
     'revisorRequest' =>'Congrats you have requested to become a revisor successfully',
